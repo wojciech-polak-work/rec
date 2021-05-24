@@ -6,7 +6,6 @@ import java.io.Reader
 class CsvReader {
 
     fun <T> read(reader: Reader, toObject: (Array<String>) -> T): List<T> {
-
             CSVReaderBuilder(reader)
                     .withSkipLines(1)
                     .build()

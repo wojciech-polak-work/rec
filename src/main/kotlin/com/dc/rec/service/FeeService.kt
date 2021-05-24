@@ -27,7 +27,6 @@ class FeeService(val feeCalculationDao: FeeCalculationDao) {
     }
 
     fun getAllFees(): List<FeeDto> {
-
         val calculatedFees = (cache[TRANSACTIONS_CACHE_NAME] as List<Transaction>?)!!
                 .groupBy { it.customerId }
                 .map { it.key }
@@ -39,7 +38,6 @@ class FeeService(val feeCalculationDao: FeeCalculationDao) {
     }
 
     private fun saveFees(calculatedFees: List<FeeDto>) {
-
         calculatedFees
                 .map { FeeCalculation(customerId = it.customerId, totalFee = it.totalFee) }
                 .forEach {
@@ -75,7 +73,6 @@ class FeeService(val feeCalculationDao: FeeCalculationDao) {
             (totalTransactionSum * feeWage.feePercentageOfTransactionValue) / 100
 
     private fun findFeeWage(feeWages: List<FeeWage>, totalTransactionSum: Double): FeeWage {
-
         val sortedWages = feeWages.sortedBy { it.transactionValueLessThan }
         val feeWage = sortedWages.find { totalTransactionSum < it.transactionValueLessThan }
 
@@ -85,7 +82,6 @@ class FeeService(val feeCalculationDao: FeeCalculationDao) {
     }
 
     private fun findLatestTransactionDate(transactionsByCustomerId: List<Transaction>): LocalDateTime {
-
         return transactionsByCustomerId
                 .map { transaction -> transaction.transactionDate }
                 .maxByOrNull { date -> date }!!
