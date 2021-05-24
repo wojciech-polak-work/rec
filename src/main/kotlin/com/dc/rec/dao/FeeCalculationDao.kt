@@ -8,14 +8,14 @@ import org.springframework.stereotype.Repository
 @Repository
 class FeeCalculationDao(val mongoTemplate: MongoTemplate) {
 
-    private val log = logger {}
-
-    companion object{
+    companion object {
         const val FEE_COLLECTION = "FEE"
     }
 
+    private val log = logger {}
+
     fun save(feeCalculation: FeeCalculation) {
-        log.info("Saving fee calculation for customer id: {} at ", feeCalculation.customerId, feeCalculation.date)
+        log.info("Saving fee calculation for customer id: {} at {}", feeCalculation.customerId, feeCalculation.date)
 
         mongoTemplate.insert(feeCalculation, FEE_COLLECTION)
     }

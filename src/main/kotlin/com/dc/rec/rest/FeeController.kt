@@ -15,7 +15,7 @@ class FeeController(private val feeService: FeeService) {
     @GetMapping("/{customerIds}", "")
     fun getFees(@PathVariable customerIds: String?): ResponseEntity<List<FeeDto>> {
 
-        return if (customerIds.isNullOrBlank() || customerIds.equals( "ALL", ignoreCase = true)) {
+        return if (customerIds.isNullOrBlank() || customerIds.equals("ALL", ignoreCase = true)) {
             ResponseEntity.ok(feeService.getAllFees())
         } else {
             val customerIdsAfterSplit = customerIds.trim().split(",")

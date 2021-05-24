@@ -38,7 +38,7 @@ class InitDataLoader(val csvReader: CsvReader = CsvReader()) : ApplicationRunner
         }
     }
 
-    private fun initTransactions(file: File){
+    private fun initTransactions(file: File) {
         FileReader(file).use {
             val transactions = csvReader.read(it, transactionConverter)
 

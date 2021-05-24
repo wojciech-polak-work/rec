@@ -77,9 +77,9 @@ class FeeService(val feeCalculationDao: FeeCalculationDao) {
     private fun findFeeWage(feeWages: List<FeeWage>, totalTransactionSum: Double): FeeWage {
 
         val sortedWages = feeWages.sortedBy { it.transactionValueLessThan }
-        val feeWage = sortedWages.find {totalTransactionSum < it.transactionValueLessThan }
+        val feeWage = sortedWages.find { totalTransactionSum < it.transactionValueLessThan }
 
-        if(feeWage != null) return feeWage
+        if (feeWage != null) return feeWage
 
         return sortedWages.last()
     }
