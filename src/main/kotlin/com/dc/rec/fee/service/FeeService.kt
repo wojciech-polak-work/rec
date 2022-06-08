@@ -1,15 +1,15 @@
-package com.dc.rec.service
+package com.dc.rec.fee.service
 
 
-import com.dc.rec.dao.FeeCalculationDao
-import com.dc.rec.domain.FeeCalculation
-import com.dc.rec.domain.FeeWage
-import com.dc.rec.domain.Transaction
-import com.dc.rec.helpers.FEE_WAGES_CACHE_NAME
-import com.dc.rec.helpers.TRANSACTIONS_CACHE_NAME
-import com.dc.rec.helpers.cache
-import com.dc.rec.helpers.logger
-import com.dc.rec.rest.dto.FeeDto
+import com.dc.rec.fee.repository.FeeCalculationDao
+import com.dc.rec.fee.domain.FeeCalculation
+import com.dc.rec.fee.domain.FeeWage
+import com.dc.rec.fee.domain.Transaction
+import com.dc.rec.commons.FEE_WAGES_CACHE_NAME
+import com.dc.rec.commons.TRANSACTIONS_CACHE_NAME
+import com.dc.rec.commons.cache
+import com.dc.rec.commons.logger
+import com.dc.rec.fee.controller.dto.FeeDto
 import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 

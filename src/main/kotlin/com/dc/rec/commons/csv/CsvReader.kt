@@ -1,4 +1,4 @@
-package com.dc.rec.csv
+package com.dc.rec.commons.csv
 
 import com.opencsv.CSVReaderBuilder
 import java.io.Reader

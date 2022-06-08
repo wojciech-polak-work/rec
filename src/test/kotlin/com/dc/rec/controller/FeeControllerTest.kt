@@ -1,6 +1,7 @@
-package com.dc.rec.rest
+package com.dc.rec.controller
 
 
+import com.dc.rec.fee.controller.FeeController
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

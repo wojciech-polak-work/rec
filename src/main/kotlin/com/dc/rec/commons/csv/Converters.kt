@@ -1,7 +1,7 @@
-package com.dc.rec.csv
+package com.dc.rec.commons.csv
 
-import com.dc.rec.domain.FeeWage
-import com.dc.rec.domain.Transaction
+import com.dc.rec.fee.domain.FeeWage
+import com.dc.rec.fee.domain.Transaction
 import java.time.LocalDateTime.parse
 import java.time.format.DateTimeFormatter.ofPattern
 

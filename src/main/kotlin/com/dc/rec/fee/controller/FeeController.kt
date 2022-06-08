@@ -1,7 +1,7 @@
-package com.dc.rec.rest
+package com.dc.rec.fee.controller
 
-import com.dc.rec.rest.dto.FeeDto
-import com.dc.rec.service.FeeService
+import com.dc.rec.fee.controller.dto.FeeDto
+import com.dc.rec.fee.service.FeeService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
