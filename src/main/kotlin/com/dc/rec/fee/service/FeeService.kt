@@ -2,9 +2,9 @@ package com.dc.rec.fee.service
 
 
 import com.dc.rec.fee.repository.FeeCalculationDao
-import com.dc.rec.fee.domain.FeeCalculation
-import com.dc.rec.fee.domain.FeeWage
-import com.dc.rec.fee.domain.Transaction
+import com.dc.rec.fee.model.FeeCalculation
+import com.dc.rec.fee.model.FeeWage
+import com.dc.rec.fee.model.Transaction
 import com.dc.rec.commons.FEE_WAGES_CACHE_NAME
 import com.dc.rec.commons.TRANSACTIONS_CACHE_NAME
 import com.dc.rec.commons.cache

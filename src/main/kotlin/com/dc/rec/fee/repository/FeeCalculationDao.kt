@@ -1,6 +1,6 @@
 package com.dc.rec.fee.repository
 
-import com.dc.rec.fee.domain.FeeCalculation
+import com.dc.rec.fee.model.FeeCalculation
 import com.dc.rec.commons.logger
 import org.springframework.data.mongodb.core.MongoTemplate
 import org.springframework.stereotype.Repository

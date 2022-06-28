@@ -1,4 +1,4 @@
-package com.dc.rec.fee.domain
+package com.dc.rec.fee.model
 
 import java.time.LocalDateTime.now
 import java.util.UUID.randomUUID
